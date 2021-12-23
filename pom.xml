@@ -41,6 +41,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba.cola/cola-component-dto -->
+        <dependency>
+            <groupId>com.alibaba.cola</groupId>
+            <artifactId>cola-component-dto</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
