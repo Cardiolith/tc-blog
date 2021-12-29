@@ -12,7 +12,7 @@ create table `blog`
 create table `keyword`
 (
     id           bigint(20)  not null auto_increment primary key,
-    keyword      varchar(64) not null,
+    value      varchar(64) not null,
     date_created timestamp,
     last_updated timestamp,
     create_by    bigint(20),
@@ -22,7 +22,7 @@ create table `keyword`
 create table `category`
 (
     id           bigint(20)  not null auto_increment primary key,
-    category     varchar(32) not null,
+    value     varchar(32) not null,
     date_created timestamp,
     last_updated timestamp,
     create_by    bigint(20),

@@ -21,7 +21,7 @@ public class BlogGatewayImpl implements BlogGateway {
     @Override
     public void save(Blog blog) {
         BlogDO blogDO = BlogConvertor.toDataObject(blog);
-        BlogDO saved = blogRepository.save(blogDO);
-        logger.debug("AutoGenerateID: ");
+        blogRepository.save(blogDO);
+        logger.debug("AutoGenerateID: " + blogDO.getId());
     }
 }

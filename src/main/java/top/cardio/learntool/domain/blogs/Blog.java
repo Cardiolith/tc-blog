@@ -5,6 +5,8 @@ import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Collection;
+
 @Data
 public class Blog extends EntityObject {
 
@@ -12,4 +14,7 @@ public class Blog extends EntityObject {
 
     private String title;
     private String filePath;
+
+    Collection<Keyword> keywords;
+    Collection<Category> categories;
 }
