@@ -1,0 +1,49 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: LearnTool
+  profiles:
+      active: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;MODE=MySQL
+    username: sa
+    password: 123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      data-locations: classpath:sqls/data.sql
+      schema-locations: classpath:sqls/ddl.sql
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+    import: classpath:mysql-config.properties
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod

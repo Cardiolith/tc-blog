@@ -46,13 +46,25 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.200</version>
-            <scope>test</scope>
+            <scope>runtime</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.alibaba.cola/cola-component-dto -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-configuration-processor -->
         <dependency>
-            <groupId>com.alibaba.cola</groupId>
-            <artifactId>cola-component-dto</artifactId>
-            <version>4.0.1</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aliyun/cola-common -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>cola-common</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aliyun/cola-core -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>cola-core</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
     </dependencies>
