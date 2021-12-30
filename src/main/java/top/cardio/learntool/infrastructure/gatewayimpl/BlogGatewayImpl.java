@@ -10,12 +10,14 @@ import top.cardio.learntool.infrastructure.convertor.BlogConvertor;
 import top.cardio.learntool.infrastructure.gatewayimpl.database.BlogRepository;
 import top.cardio.learntool.infrastructure.gatewayimpl.database.dataobject.BlogDO;
 
+import javax.annotation.Resource;
+
 @Component
 public class BlogGatewayImpl implements BlogGateway {
 
     private static Logger logger = LoggerFactory.getLogger(BlogGatewayImpl.class);
 
-    @Autowired
+    @Resource
     private BlogRepository blogRepository;
 
     @Override
