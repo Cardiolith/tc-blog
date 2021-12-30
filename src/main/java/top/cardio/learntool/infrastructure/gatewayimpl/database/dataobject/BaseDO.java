@@ -1,5 +1,6 @@
 package top.cardio.learntool.infrastructure.gatewayimpl.database.dataobject;
 
+import lombok.Data;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -12,6 +13,7 @@ import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
 @MappedSuperclass
+@Data
 public class BaseDO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
